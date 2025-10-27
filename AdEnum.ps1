@@ -1,6 +1,3 @@
-# Save as: AD_Enum.ps1
-# Run in PowerShell on a domain-joined system
-
 Write-Host "==== AS-REP Roastable Accounts ====" -ForegroundColor Cyan
 $searcher = New-Object DirectoryServices.DirectorySearcher
 $searcher.Filter = "(&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=4194304)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))"
